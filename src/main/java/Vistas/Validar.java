@@ -86,6 +86,7 @@ public class Validar extends javax.swing.JFrame {
         Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 80, 40));
 
         B_Salida.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        B_Salida.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\salida.png")); // NOI18N
         B_Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         B_Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

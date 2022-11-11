@@ -80,23 +80,12 @@ public class Controllador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == log.Inciar) {
-            user = "admin";
-            pass = "123";
 
-            if (log.User.getText().equals(user) && log.Pass.getText().equals(pass)) {
+            if (log.User.getText().equals("admin") && log.Pass.getText().equals("123")) {
 
                 menu.setVisible(true);
                 log.setVisible(false);
-            } else {
-                JOptionPane.showMessageDialog(null, "Error de autenticacion");
-            }
-        }
-
-        if (e.getSource() == log.Inciar) {
-            user = "vigi";
-            pass = "345";
-
-            if (log.User.getText().equals(user) && log.Pass.getText().equals(pass)) {
+            } else if (log.User.getText().equals("345") && log.Pass.getText().equals("vigi")) {
 
                 menu.setVisible(true);
                 log.setVisible(false);
