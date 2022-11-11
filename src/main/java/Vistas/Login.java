@@ -55,7 +55,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         jLabel2.setText("Usuario");
@@ -64,9 +64,7 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("Password");
 
         Inciar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
-        Inciar.setIcon(new javax.swing.ImageIcon("C:\\Users\\SENA\\Downloads\\entrada.jpg")); // NOI18N
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\SENA\\Downloads\\icono admin.jpg2.jpg")); // NOI18N
+        Inciar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\entrada.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

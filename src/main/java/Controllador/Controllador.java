@@ -105,6 +105,9 @@ public class Controllador implements ActionListener {
             }
 
         }
+        if (e.getSource() == log.Inciar) {
+
+        }
 
         /*
         FUNCIONES DE LOS BOTONES DE EL MENU
@@ -154,22 +157,24 @@ public class Controllador implements ActionListener {
             Fecha = Validacion.date.getText();
             Hora = Validacion.hour.getText();
 
-            crp.registro_1(Id, Nombres, Apellidos, Cargo, Fecha, Hora);
+            boolean save = crp.registro_1(Id, Nombres, Apellidos, Cargo, Fecha, Hora);
 
-            this.Validacion.Nombres.setText(Nombres+" "+Apellidos+" "+Cargo);
+            if (save = true) {
 
-            JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
+                this.Validacion.Nombres.setText(Nombres + " " + Apellidos + " " + Cargo);
 
-//
-            this.Validacion.Identificacion.setText("");
-            this.Validacion.Nombres.setText("");
-//            } else {
-//                JOptionPane.showMessageDialog(null, "Error al Guardar");
-//            }
-//                JOptionPane.showMessageDialog(null, "Acceso Permitido" + "\n" + this.Nombres);
+                JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
+
+                this.Validacion.Identificacion.setText("");
+                this.Validacion.Nombres.setText("");
+            } else {
+                JOptionPane.showMessageDialog(null, "Error al Guardar");
+
+            }
         }
 
-        if (e.getSource() == Validacion.B_Salida) {
+        if (e.getSource()
+                == Validacion.B_Salida) {
             Id = Integer.parseInt(Validacion.Identificacion.getText());
             Hora = Validacion.hour.getText();
             crp.registro_2(Id, Hora);
