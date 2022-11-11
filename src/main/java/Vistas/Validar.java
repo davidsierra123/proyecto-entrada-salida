@@ -49,13 +49,13 @@ public class Validar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Panel_Verificar.setBackground(new java.awt.Color(255, 255, 255));
+        Panel_Verificar.setBackground(new java.awt.Color(204, 255, 255));
         Panel_Verificar.setForeground(new java.awt.Color(255, 255, 255));
         Panel_Verificar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         Titulo.setText("Registrar Entrada Y Salida");
-        Panel_Verificar.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, -1, -1));
+        Panel_Verificar.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, -1, -1));
 
         Id_Title.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         Id_Title.setText("Identificacion");
@@ -76,27 +76,25 @@ public class Validar extends javax.swing.JFrame {
         jLabel1.setText("INSTITUCION EDUCATIVA LA AGUADA SEDE PRINCIPAL");
         Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 410, -1));
 
-        B_Validar.setBackground(new java.awt.Color(0, 255, 255));
         B_Validar.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        B_Validar.setText("Entrada");
+        B_Validar.setIcon(new javax.swing.ImageIcon("C:\\Users\\SENA\\Downloads\\entrada.jpg")); // NOI18N
         B_Validar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         B_Validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 B_ValidarActionPerformed(evt);
             }
         });
-        Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 100, 35));
+        Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 80, 40));
 
-        B_Salida.setBackground(new java.awt.Color(0, 255, 255));
         B_Salida.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        B_Salida.setText("Salida");
+        B_Salida.setIcon(new javax.swing.ImageIcon("C:\\Users\\SENA\\Downloads\\salida student.jpg")); // NOI18N
         B_Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         B_Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 B_SalidaActionPerformed(evt);
             }
         });
-        Panel_Verificar.add(B_Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 100, 35));
+        Panel_Verificar.add(B_Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 80, 40));
 
         Panel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 0, 0)), "VERIFIQUE QUE SUS DATOS SEAN CORRECTOS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic", 1, 12), new java.awt.Color(102, 0, 0))); // NOI18N
 
@@ -171,11 +169,10 @@ public class Validar extends javax.swing.JFrame {
 
         Panel_Verificar.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 120, 100));
 
-        Regresar.setBackground(new java.awt.Color(255, 0, 0));
         Regresar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         Regresar.setForeground(new java.awt.Color(255, 255, 255));
-        Regresar.setText("Return");
-        Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 110, 40));
+        Regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\SENA\\Downloads\\retroce.jpg2.jpg")); // NOI18N
+        Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 70, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

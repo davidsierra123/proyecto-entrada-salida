@@ -43,40 +43,42 @@ public class Menu extends javax.swing.JFrame {
         setIconImage(getIconImage());
         setIconImages(getIconImages());
 
+        Panel.setBackground(new java.awt.Color(102, 255, 204));
+
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 894, Short.MAX_VALUE)
+            .addGap(0, 946, Short.MAX_VALUE)
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 505, Short.MAX_VALUE)
+            .addGap(0, 537, Short.MAX_VALUE)
         );
 
         Menu_A.setText("Asistencias");
-        Menu_A.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Menu_A.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Reg_asistencia.setText("Reg.Asistencia");
-        Reg_asistencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Reg_asistencia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Menu_A.add(Reg_asistencia);
 
         menus.add(Menu_A);
 
         Menu_Alum.setText("Alumnos");
-        Menu_Alum.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Menu_Alum.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Reg_Alumnos.setText("Reg.Alumnos");
-        Reg_Alumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Reg_Alumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Menu_Alum.add(Reg_Alumnos);
 
         menus.add(Menu_Alum);
 
         Menu_Pro.setText("Profesores");
-        Menu_Pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Menu_Pro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Reg_Profesores.setText("Reg.Profesores");
-        Reg_Profesores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Reg_Profesores.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Reg_Profesores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reg_ProfesoresActionPerformed(evt);
@@ -87,10 +89,10 @@ public class Menu extends javax.swing.JFrame {
         menus.add(Menu_Pro);
 
         Menu_aseo.setText("Per.Aseo");
-        Menu_aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Menu_aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         Reg_Personal_Aseo.setText("Reg.Per.Aseo");
-        Reg_Personal_Aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Reg_Personal_Aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Reg_Personal_Aseo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reg_Personal_AseoActionPerformed(evt);
@@ -106,15 +108,11 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 52, Short.MAX_VALUE))
+            .addComponent(Panel)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 32, Short.MAX_VALUE))
+            .addComponent(Panel)
         );
 
         pack();
