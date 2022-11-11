@@ -8,7 +8,6 @@ import Modelos.Guardar_Asistencia;
 import Modelos.Reloj;
 import Modelos.crudpersona;
 import Vistas.Alumnos;
-import Vistas.Asistencias;
 import Vistas.Login;
 import Vistas.Validar;
 import Vistas.Menu;

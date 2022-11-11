@@ -5,7 +5,6 @@
 
 package Iniciar;
 import Controllador.Controllador;
-import Vistas.Asistencias;
 import Vistas.Login;
 
 /**

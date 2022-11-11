@@ -106,7 +106,7 @@ public class crudpersona extends Conexion implements CRUD {
         try {
             cst = con.prepareCall(sql);
             cst.setInt(1, Id);
-            cst.setString(7, Hora);
+            cst.setString(2, Hora);
             cst.execute();
 
             return true;

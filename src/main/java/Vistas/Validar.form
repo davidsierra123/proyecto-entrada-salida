@@ -101,7 +101,7 @@
         <Component class="javax.swing.JTextField" name="Identificacion">
           <Properties>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -117,7 +117,7 @@
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -148,10 +148,10 @@
               <Font name="Segoe UI Black" size="14" style="2"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\SENA\Downloads\entrada.jpg"/>
+              <Image iconType="3" name="/IMG/entrada.jpg"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -172,10 +172,10 @@
               <Font name="Segoe UI Black" size="14" style="2"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\SENA\Downloads\salida student.jpg"/>
+              <Image iconType="3" name="/IMG/salida student.jpg"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -387,7 +387,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\SENA\Downloads\retroce.jpg2.jpg"/>
+              <Image iconType="3" name="/IMG/Regresar.png"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -395,7 +395,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="160" y="410" width="70" height="70"/>
+              <AbsoluteConstraints x="160" y="410" width="80" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
