@@ -87,6 +87,8 @@ public class Controllador implements ActionListener {
 
                 menu.setVisible(true);
                 log.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "Error de autenticacion");
             }
         }
 
@@ -102,6 +104,8 @@ public class Controllador implements ActionListener {
                 menu.Menu_Alum.setVisible(false);
                 menu.Menu_Pro.setVisible(false);
                 menu.Menu_aseo.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "Error de autenticacion");
             }
 
         }
