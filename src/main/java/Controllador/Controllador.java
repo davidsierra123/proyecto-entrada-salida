@@ -51,7 +51,7 @@ public class Controllador implements ActionListener {
 
     public Controllador(Login log) {
 
-        /*BOTONES DEL FORMUULARIO LOGIN*/
+        /*BOTONES DEL FORMULARIO LOGIN*/
         
         
         this.log = log;
