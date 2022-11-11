@@ -51,6 +51,9 @@ public class Controllador implements ActionListener {
 
     public Controllador(Login log) {
 
+        /*BOTONES DEL FORMUULARIO LOGIN*/
+        
+        
         this.log = log;
         this.Validar();
         this.log.Inciar.addActionListener(this);
