@@ -10,5 +10,6 @@ package interfaz;
  */
 public interface CRUD {
     public boolean mostrar(int Id, String Nombre, String Apellidos,String Cargo, String Fecha, String Hr_Entrada, String Hr_salida);
-    public boolean guardar_usuario(int Id, String Nombres,String Hora);
+    public boolean registro_1(int Id, String Nombres,String Apellidos,String Cargo,String Fecha,String Hora);
+    public boolean registro_2(int Id,String Hora);
 }

@@ -61,17 +61,20 @@ public class crudpersona extends Conexion implements CRUD {
     }
 
     @Override
-    public boolean guardar_usuario(int Id, String Nombres,String Hora) {
+    public boolean registro_1(int Id, String Nombres,String Apellidos,String Cargo,String Fecha,String Hora) {
 
         Connection con = getConexion();
         ResultSet rs = null;
         CallableStatement cst = null;
-        String sql = "{call Guardar_Usuario(?,?,?)}";
+        String sql = "{call Registro(?,?,?,?,?,?)}";
 
         try {
             cst = con.prepareCall(sql);
             cst.setInt(1, Id);
             cst.setString(2, Nombres);
+            cst.setString(3, Apellidos);
+            cst.setString(4, Cargo);
+            cst.setString(5, Fecha);
             cst.setString(6, Hora);
             cst.execute();
 
@@ -90,6 +93,36 @@ public class crudpersona extends Conexion implements CRUD {
             }
         }
 
+    }
+
+    @Override
+    public boolean registro_2(int Id, String Hora) {
+        
+        Connection con = getConexion();
+        ResultSet rs = null;
+        CallableStatement cst = null;
+        String sql = "{call Registro_2(?,?)}";
+
+        try {
+            cst = con.prepareCall(sql);
+            cst.setInt(1, Id);
+            cst.setString(7, Hora);
+            cst.execute();
+
+            return true;
+
+        } catch (SQLException e) {
+
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+                return false;
+            }
+        }
     }
 
 }

@@ -52,8 +52,6 @@ public class Controllador implements ActionListener {
     public Controllador(Login log) {
 
         /*BOTONES DEL FORMULARIO LOGIN*/
-        
-        
         this.log = log;
         this.Validar();
         this.log.Inciar.addActionListener(this);
@@ -83,22 +81,20 @@ public class Controllador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == log.Inciar) {
-
             user = "admin";
             pass = "123";
 
             if (log.User.getText().equals(user) && log.Pass.getText().equals(pass)) {
 
-                /*Validacion.setVisible(true);*/
                 menu.setVisible(true);
                 log.setVisible(false);
-
             }
         }
 
         if (e.getSource() == log.Inciar) {
             user = "vigi";
             pass = "345";
+
             if (log.User.getText().equals(user) && log.Pass.getText().equals(pass)) {
 
                 menu.setVisible(true);
@@ -153,12 +149,17 @@ public class Controllador implements ActionListener {
         if (e.getSource() == this.Validacion.B_Validar) {
 
             Id = Integer.parseInt(Validacion.Identificacion.getText());
-            Nombres = Validacion.Nombres.getText();
-//            Validacion.Nombres.setText(Nombres);
-            Hora = Validacion.hour.getText();
-            crp.guardar_usuario(Id, Nombres, Hora);
+            Nombres = "Gonzalo";
+            Apellidos = "Araujo";
             Cargo = "Estudiante";
-            JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Acceso Permitido!</p></html>" + "\n" + "Cargo: " + Cargo);
+            Fecha = Validacion.date.getText();
+            Hora = Validacion.hour.getText();
+
+            crp.registro_1(Id, Nombres, Apellidos, Cargo, Fecha, Hora);
+
+            this.Validacion.Nombres.setText(Nombres+" "+Apellidos+" "+Cargo);
+
+            JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
 
 //
             this.Validacion.Identificacion.setText("");
@@ -167,6 +168,14 @@ public class Controllador implements ActionListener {
 //                JOptionPane.showMessageDialog(null, "Error al Guardar");
 //            }
 //                JOptionPane.showMessageDialog(null, "Acceso Permitido" + "\n" + this.Nombres);
+        }
+
+        if (e.getSource() == Validacion.B_Salida) {
+            Id = Integer.parseInt(Validacion.Identificacion.getText());
+            Hora = Validacion.hour.getText();
+            crp.registro_2(Id, Hora);
+
+            JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Salida Exitoso!</p></html>" + "\n");
         }
     }
 }
