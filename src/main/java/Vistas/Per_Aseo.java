@@ -34,7 +34,9 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
         Nom_Aseo = new javax.swing.JTextField();
         Ape_Aseo = new javax.swing.JTextField();
         Id_Aseo = new javax.swing.JTextField();
-        Cargo_Aseo = new javax.swing.JTextField();
+        btnguardar = new javax.swing.JButton();
+        btnmostrar = new javax.swing.JButton();
+        txtrol = new javax.swing.JTextField();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -55,7 +57,7 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
         jLabel6.setText("Apellidos");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
-        jLabel7.setText("Cargo");
+        jLabel7.setText("Rol");
 
         Nom_Aseo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,9 +77,15 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
             }
         });
 
-        Cargo_Aseo.addActionListener(new java.awt.event.ActionListener() {
+        btnguardar.setText("Guardar");
+
+        btnmostrar.setText("Mostrar");
+
+        txtrol.setEditable(false);
+        txtrol.setText("Personal de Aseo");
+        txtrol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Cargo_AseoActionPerformed(evt);
+                txtrolActionPerformed(evt);
             }
         });
 
@@ -93,12 +101,18 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cargo_Aseo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ape_Aseo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Nom_Aseo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Id_Aseo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Ape_Aseo, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                    .addComponent(Nom_Aseo)
+                    .addComponent(Id_Aseo)
+                    .addComponent(txtrol))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addComponent(btnguardar)
+                .addGap(85, 85, 85)
+                .addComponent(btnmostrar)
+                .addGap(0, 121, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,8 +132,12 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cargo_Aseo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(110, Short.MAX_VALUE))
+                    .addComponent(txtrol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnguardar)
+                    .addComponent(btnmostrar))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,9 +155,9 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Id_AseoActionPerformed
 
-    private void Cargo_AseoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cargo_AseoActionPerformed
+    private void txtrolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtrolActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Cargo_AseoActionPerformed
+    }//GEN-LAST:event_txtrolActionPerformed
 
         public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -175,12 +193,14 @@ public class Per_Aseo extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextField Ape_Aseo;
-    public javax.swing.JTextField Cargo_Aseo;
     public javax.swing.JTextField Id_Aseo;
     public javax.swing.JTextField Nom_Aseo;
+    public javax.swing.JButton btnguardar;
+    public javax.swing.JButton btnmostrar;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    public javax.swing.JTextField txtrol;
     // End of variables declaration//GEN-END:variables
 }

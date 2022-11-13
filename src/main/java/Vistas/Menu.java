@@ -38,22 +38,25 @@ public class Menu extends javax.swing.JFrame {
         Reg_Profesores = new javax.swing.JMenuItem();
         Menu_aseo = new javax.swing.JMenu();
         Reg_Personal_Aseo = new javax.swing.JMenuItem();
+        Menuregistrosusuarios = new javax.swing.JMenu();
+        MItemregistros = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
         setIconImages(getIconImages());
 
         Panel.setBackground(new java.awt.Color(102, 255, 204));
+        Panel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 946, Short.MAX_VALUE)
+            .addGap(0, 1048, Short.MAX_VALUE)
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 537, Short.MAX_VALUE)
+            .addGap(0, 552, Short.MAX_VALUE)
         );
 
         Menu_A.setText("Asistencias");
@@ -101,6 +104,13 @@ public class Menu extends javax.swing.JFrame {
         Menu_aseo.add(Reg_Personal_Aseo);
 
         menus.add(Menu_aseo);
+
+        Menuregistrosusuarios.setText("Usuarios Registrados");
+
+        MItemregistros.setText("Registros");
+        Menuregistrosusuarios.add(MItemregistros);
+
+        menus.add(Menuregistrosusuarios);
 
         setJMenuBar(menus);
 
@@ -161,10 +171,12 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JMenuItem MItemregistros;
     public javax.swing.JMenu Menu_A;
     public javax.swing.JMenu Menu_Alum;
     public javax.swing.JMenu Menu_Pro;
     public javax.swing.JMenu Menu_aseo;
+    public javax.swing.JMenu Menuregistrosusuarios;
     public javax.swing.JDesktopPane Panel;
     public javax.swing.JMenuItem Reg_Alumnos;
     public javax.swing.JMenuItem Reg_Personal_Aseo;

@@ -39,13 +39,9 @@ public class Validar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         B_Validar = new javax.swing.JButton();
         B_Salida = new javax.swing.JButton();
-        Panel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tabla_asistencoias = new javax.swing.JTable();
-        jPanel1 = new javax.swing.JPanel();
-        hour = new javax.swing.JLabel();
-        date = new javax.swing.JLabel();
         Regresar = new javax.swing.JButton();
+        date = new javax.swing.JLabel();
+        hour = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +51,7 @@ public class Validar extends javax.swing.JFrame {
 
         Titulo.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         Titulo.setText("Registrar Entrada Y Salida");
-        Panel_Verificar.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, -1, -1));
+        Panel_Verificar.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
         Id_Title.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         Id_Title.setText("Identificacion");
@@ -74,9 +70,11 @@ public class Validar extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         jLabel1.setText("INSTITUCION EDUCATIVA LA AGUADA SEDE PRINCIPAL");
-        Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 410, -1));
+        Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 410, -1));
 
         B_Validar.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        B_Validar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\entrada.png")); // NOI18N
+        B_Validar.setBorderPainted(false);
         B_Validar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         B_Validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,92 +93,28 @@ public class Validar extends javax.swing.JFrame {
         });
         Panel_Verificar.add(B_Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 80, 40));
 
-        Panel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 0, 0)), "VERIFIQUE QUE SUS DATOS SEAN CORRECTOS", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Yu Gothic", 1, 12), new java.awt.Color(102, 0, 0))); // NOI18N
-
-        tabla_asistencoias.setBackground(new java.awt.Color(255, 204, 204));
-        tabla_asistencoias.setFont(new java.awt.Font("Yu Gothic UI", 1, 12)); // NOI18N
-        tabla_asistencoias.setForeground(new java.awt.Color(102, 0, 0));
-        tabla_asistencoias.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Cargo", "Fecha", "Hora"
-            }
-        ));
-        tabla_asistencoias.setEnabled(false);
-        tabla_asistencoias.setSelectionBackground(new java.awt.Color(255, 204, 153));
-        jScrollPane1.setViewportView(tabla_asistencoias);
-
-        javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
-        Panel.setLayout(PanelLayout);
-        PanelLayout.setHorizontalGroup(
-            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        PanelLayout.setVerticalGroup(
-            PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        Panel_Verificar.add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, -1, -1));
-
-        jPanel1.setBackground(new java.awt.Color(0, 102, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hora Y Fecha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(255, 255, 51))); // NOI18N
-
-        hour.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        hour.setForeground(new java.awt.Color(255, 255, 255));
-        hour.setText("00:00:00");
-
-        date.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
-        date.setForeground(new java.awt.Color(255, 255, 255));
-        date.setText("YY/MM/DD");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                    .addComponent(hour, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(hour)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(date)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-
-        Panel_Verificar.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 20, 120, 100));
-
         Regresar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         Regresar.setForeground(new java.awt.Color(255, 255, 255));
+        Regresar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\Regresar.png")); // NOI18N
         Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 80, 30));
+
+        date.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        date.setText("YY/MM/DD");
+        Panel_Verificar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 98, -1));
+
+        hour.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
+        hour.setText("00:00:00");
+        Panel_Verificar.add(hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 98, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel_Verificar, javax.swing.GroupLayout.PREFERRED_SIZE, 1122, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_Verificar, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel_Verificar, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE)
+            .addComponent(Panel_Verificar, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
         );
 
         pack();
@@ -236,15 +170,11 @@ public class Validar extends javax.swing.JFrame {
     public javax.swing.JTextField Identificacion;
     public javax.swing.JLabel Nom_Title2;
     public javax.swing.JTextField Nombres;
-    public javax.swing.JPanel Panel;
     public javax.swing.JPanel Panel_Verificar;
     public javax.swing.JButton Regresar;
     public javax.swing.JLabel Titulo;
     public javax.swing.JLabel date;
     public javax.swing.JLabel hour;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable tabla_asistencoias;
     // End of variables declaration//GEN-END:variables
 }

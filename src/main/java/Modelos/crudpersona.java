@@ -19,7 +19,6 @@ import java.util.Iterator;
  */
 public class crudpersona extends Conexion implements CRUD {
 
-    
     @Override
     public boolean mostrar(int id, String nombre, String apellidos, String Cargo, String fecha, String Hr_entrada, String Hr_salida) {
 
@@ -61,7 +60,7 @@ public class crudpersona extends Conexion implements CRUD {
     }
 
     @Override
-    public boolean registro_1(int Id, String Nombres,String Apellidos,String Cargo,String Fecha,String Hora) {
+    public boolean registro_entrada(int Id, String Nombres, String Apellidos, String Cargo, String Fecha, String Hora) {
 
         Connection con = getConexion();
         ResultSet rs = null;
@@ -95,7 +94,7 @@ public class crudpersona extends Conexion implements CRUD {
 
     }
 
-    @Override
+    /*@Override
     public boolean registro_2(int Id, String Hora) {
         
         Connection con = getConexion();
@@ -107,6 +106,99 @@ public class crudpersona extends Conexion implements CRUD {
             cst = con.prepareCall(sql);
             cst.setInt(1, Id);
             cst.setString(2, Hora);
+            cst.execute();
+
+            return true;
+
+        } catch (SQLException e) {
+
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+                return false;
+            }
+        }
+    }*/
+    @Override
+    public boolean registro_Estudiantes(int Id, String Nombres, String Apellidos, String Rol) {
+        Connection con = getConexion();
+        ResultSet rs = null;
+        CallableStatement cst = null;
+        String sql = "{call Guardar_estudiantes(?,?,?,?)}";
+
+        try {
+            cst = con.prepareCall(sql);
+            cst.setInt(1, Id);
+            cst.setString(2, Nombres);
+            cst.setString(3, Apellidos);
+            cst.setString(4, Rol);
+            cst.execute();
+
+            return true;
+
+        } catch (SQLException e) {
+
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+                return false;
+            }
+        }
+    }
+
+    @Override
+    public boolean registro_Profesores(int Id, String Nombres, String Apellidos, String Rol) {
+        Connection con = getConexion();
+        ResultSet rs = null;
+        CallableStatement cst = null;
+        String sql = "{call Guardar_Profesores(?,?,?,?)}";
+
+        try {
+            cst = con.prepareCall(sql);
+            cst.setInt(1, Id);
+            cst.setString(2, Nombres);
+            cst.setString(3, Apellidos);
+            cst.setString(4, Rol);
+            cst.execute();
+
+            return true;
+
+        } catch (SQLException e) {
+
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+                return false;
+            }
+        }
+    }
+
+    @Override
+    public boolean registro_Per_Aseo(int Id, String Nombres, String Apellidos, String Rol) {
+
+        Connection con = getConexion();
+        ResultSet rs = null;
+        CallableStatement cst = null;
+        String sql = "{call Guardar_Per_Aseo(?,?,?,?)}";
+
+        try {
+            cst = con.prepareCall(sql);
+            cst.setInt(1, Id);
+            cst.setString(2, Nombres);
+            cst.setString(3, Apellidos);
+            cst.setString(4, Rol);
             cst.execute();
 
             return true;
