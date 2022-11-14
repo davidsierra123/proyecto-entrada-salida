@@ -20,47 +20,7 @@ import java.util.Iterator;
 public class crudpersona extends Conexion implements CRUD {
 
     @Override
-    public boolean mostrar(int id, String nombre, String apellidos, String Cargo, String fecha, String Hr_entrada, String Hr_salida) {
-
-        Connection con = getConexion();
-        ResultSet rs = null;
-        CallableStatement cst = null;
-        String sql = "{call mostrar()}";
-        boolean response = false;
-
-        try {
-            cst = con.prepareCall(sql);
-            rs = cst.executeQuery();
-            response = rs.next();
-            if (response) {
-                do {
-                    System.out.println("Id: " + rs.getString(1));
-                    System.out.println("Nombre: " + rs.getString(2));
-                    System.out.println("Apellidos: " + rs.getString(3));
-                    System.out.println("fecha: " + rs.getString(4));
-                    System.out.println("entrada: " + rs.getString(5));
-                    System.out.println("salida: " + rs.getString(6));
-                } while (rs.next());
-                return true;
-            } else {
-                return false;
-            }
-
-        } catch (SQLException e) {
-
-            System.err.println(e);
-            return false;
-        } finally {
-            try {
-                con.close();
-            } catch (SQLException e) {
-                System.out.println(e.toString());
-            }
-        }
-    }
-
-    @Override
-    public boolean registro_entrada(int Id, String Nombres, String Apellidos, String Cargo, String Fecha, String Hora) {
+    public boolean registro_entrada(int Id, String Nombres, String Apellidos, String Rol, String Fecha, String Hora) {
 
         Connection con = getConexion();
         ResultSet rs = null;
@@ -72,7 +32,7 @@ public class crudpersona extends Conexion implements CRUD {
             cst.setInt(1, Id);
             cst.setString(2, Nombres);
             cst.setString(3, Apellidos);
-            cst.setString(4, Cargo);
+            cst.setString(4, Rol);
             cst.setString(5, Fecha);
             cst.setString(6, Hora);
             cst.execute();
@@ -94,35 +54,6 @@ public class crudpersona extends Conexion implements CRUD {
 
     }
 
-    /*@Override
-    public boolean registro_2(int Id, String Hora) {
-        
-        Connection con = getConexion();
-        ResultSet rs = null;
-        CallableStatement cst = null;
-        String sql = "{call Registro_2(?,?)}";
-
-        try {
-            cst = con.prepareCall(sql);
-            cst.setInt(1, Id);
-            cst.setString(2, Hora);
-            cst.execute();
-
-            return true;
-
-        } catch (SQLException e) {
-
-            System.err.println(e);
-            return false;
-        } finally {
-            try {
-                con.close();
-            } catch (SQLException e) {
-                System.out.println(e.toString());
-                return false;
-            }
-        }
-    }*/
     @Override
     public boolean registro_Estudiantes(int Id, String Nombres, String Apellidos, String Rol) {
         Connection con = getConexion();
@@ -217,4 +148,49 @@ public class crudpersona extends Conexion implements CRUD {
         }
     }
 
+    @Override
+    public boolean mostrar_Estudiante(int Id, String Nombre, String Apellidos, String Rol) {
+
+        Connection con = getConexion();
+        ResultSet rs = null;
+        CallableStatement cst = null;
+        String sql = "{call mostrar(?)}";
+        boolean response = false;
+
+        try {
+            cst = con.prepareCall(sql);
+            cst.setInt(1, Id);
+            rs = cst.executeQuery();
+            response = rs.next();
+            if (response) {
+                do {
+                    rs.getString(2);
+                    rs.getString(3);
+                    rs.getString(4);
+
+                    Controllador.Controllador.Validacion.txtNombres.setText(rs.getString(2));
+                    Controllador.Controllador.Validacion.txtApellidos.setText(rs.getString(3));
+                    Controllador.Controllador.Validacion.txtRol.setText(rs.getString(4));
+                } while (rs.next());
+
+            }
+
+        } catch (SQLException e) {
+
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean registro_entrada_2(int Id, String Nombres, String Apellidos, String Rol, String Fecha, String Hora) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

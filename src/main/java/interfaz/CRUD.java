@@ -9,9 +9,16 @@ package interfaz;
  * @author SENA
  */
 public interface CRUD {
-    public boolean mostrar(int Id, String Nombre, String Apellidos,String Cargo, String Fecha, String Hr_Entrada, String Hr_salida);
-    public boolean registro_entrada(int Id, String Nombres,String Apellidos,String Cargo,String Fecha,String Hora);
-    public boolean registro_Estudiantes(int Id, String Nombres,String Apellidos,String Rol);
-    public boolean registro_Profesores(int Id, String Nombres,String Apellidos,String Rol);
-    public boolean registro_Per_Aseo(int Id, String Nombres,String Apellidos,String Rol);
+
+    public boolean mostrar_Estudiante(int Id, String Nombre, String Apellidos, String Rol);
+
+    public boolean registro_entrada(int Id, String Nombres, String Apellidos, String Rol, String Fecha, String Hora);
+
+    public boolean registro_entrada_2(int Id, String Nombres, String Apellidos, String Rol, String Fecha, String Hora);
+
+    public boolean registro_Estudiantes(int Id, String Nombres, String Apellidos, String Rol);
+
+    public boolean registro_Profesores(int Id, String Nombres, String Apellidos, String Rol);
+
+    public boolean registro_Per_Aseo(int Id, String Nombres, String Apellidos, String Rol);
 }

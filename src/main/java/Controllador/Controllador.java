@@ -48,6 +48,7 @@ public class Controllador implements ActionListener {
      */
     crudpersona crp = new crudpersona();
     Reloj rel = new Reloj();
+    Estudiantes estudent;
 
     public Controllador(Login log) {
 
@@ -168,22 +169,21 @@ public class Controllador implements ActionListener {
         if (e.getSource() == this.Validacion.B_Validar) {
 
             Id = Integer.parseInt(Validacion.txtID.getText());
-            Nombres
-                    = Apellidos = "Araujo";
-            Rol = "Estudiante";
-            this.Validacion.txtRol.setText(Validacion.txtRol.getText());
-            this.Validacion.txtNombres.setText(Validacion.txtNombres.getText());
-            this.Validacion.txtApellidos.setText(Validacion.txtNombres.getText());
+            Nombres = Validacion.txtNombres.getText();
+            Apellidos = Validacion.txtNombres.getText();
+            Rol = Validacion.txtRol.getText();
             Fecha = Validacion.date.getText();
             Hora = Validacion.hour.getText();
+            
+            crp.mostrar_Estudiante(Id, Nombres, Apellidos, Rol);
 
             boolean save = crp.registro_entrada(Id, Nombres, Apellidos, Rol, Fecha, Hora);
 
             if (save = true) {
 
-                this.Validacion.txtNombres.setText(Nombres + " ");
+                /*this.Validacion.txtNombres.setText(Nombres + " ");
                 this.Validacion.txtApellidos.setText(Apellidos + " ");
-                this.Validacion.txtRol.setText(Rol + " ");
+                this.Validacion.txtRol.setText(Rol + " ");*/
 
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
 
