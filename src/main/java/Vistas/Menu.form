@@ -11,7 +11,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Asistencias"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -22,7 +22,7 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reg.Asistencia"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Default Cursor"/>
+                  <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -35,7 +35,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Alumnos"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -46,7 +46,7 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reg.Alumnos"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Default Cursor"/>
+                  <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -59,7 +59,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Profesores"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -70,7 +70,7 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reg.Profesores"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Default Cursor"/>
+                  <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -86,7 +86,7 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Per.Aseo"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -97,7 +97,7 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reg.Per.Aseo"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Default Cursor"/>
+                  <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
               <Events>
@@ -112,6 +112,9 @@
         <Menu class="javax.swing.JMenu" name="Menuregistrosusuarios">
           <Properties>
             <Property name="text" type="java.lang.String" value="Usuarios Registrados"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -120,6 +123,9 @@
             <MenuItem class="javax.swing.JMenuItem" name="MItemregistros">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Registros"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

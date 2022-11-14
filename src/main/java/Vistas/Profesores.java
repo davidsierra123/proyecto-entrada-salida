@@ -40,6 +40,7 @@ public class Profesores extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Registro De Profesores");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         jLabel2.setText("Nombres");
@@ -72,6 +73,7 @@ public class Profesores extends javax.swing.JInternalFrame {
         jLabel5.setText("Rol");
 
         btnguardar.setText("Guardar");
+        btnguardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         txtrol.setEditable(false);
         txtrol.setText("Profesor/a");

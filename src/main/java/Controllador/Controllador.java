@@ -109,7 +109,7 @@ public class Controllador implements ActionListener {
                 menu.Menu_Pro.setVisible(false);
                 menu.Menu_aseo.setVisible(false);
             } else {
-                JOptionPane.showMessageDialog(null, "Error de autenticacion");
+                JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error De Autenticacion!</p></html>");
             }
 
         }
@@ -229,6 +229,9 @@ public class Controllador implements ActionListener {
             Nombres = "Gonzalo";
             Apellidos = "Araujo";
             Rol = "Estudiante";
+            this.Validacion.Rol_Text.setText(Validacion.Rol_Text.getText());
+            this.Validacion.Nombres1.setText(Validacion.Nombres1.getText());
+            this.Validacion.Apellido_Text.setText(Validacion.Nombres1.getText());
             Fecha = Validacion.date.getText();
             Hora = Validacion.hour.getText();
 
@@ -236,14 +239,19 @@ public class Controllador implements ActionListener {
 
             if (save = true) {
 
-                this.Validacion.Nombres.setText(Nombres + " " + Apellidos + " " + Rol);
+                this.Validacion.Nombres1.setText(Nombres + " ");
+                this.Validacion.Rol_Text.setText(Rol + " ");
+                this.Validacion.Apellido_Text.setText(Apellidos + " ");
 
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
 
                 this.Validacion.Identificacion.setText("");
-                this.Validacion.Nombres.setText("");
+                this.Validacion.Rol_Text.setText("");
+                this.Validacion.Nombres1.setText("");
+                this.Validacion.Apellido_Text.setText("");
+
             } else {
-                JOptionPane.showMessageDialog(null, "Error al Guardar");
+                JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Error Al Validar!</p></html>");
 
             }
         }

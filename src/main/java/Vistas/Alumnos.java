@@ -93,11 +93,14 @@ public class Alumnos extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(Tabla_Alumnos);
 
         Guardar.setText("Guardar");
+        Guardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         Mostar.setText("Mostar");
+        Mostar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         txtrol.setEditable(false);
         txtrol.setText("Estudiante");
+        txtrol.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         txtrol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtrolActionPerformed(evt);

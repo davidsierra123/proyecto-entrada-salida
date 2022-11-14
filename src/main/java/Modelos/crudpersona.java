@@ -65,7 +65,7 @@ public class crudpersona extends Conexion implements CRUD {
         Connection con = getConexion();
         ResultSet rs = null;
         CallableStatement cst = null;
-        String sql = "{call Registro(?,?,?,?,?,?)}";
+        String sql = "{call entrada_de_personas(?,?,?,?,?,?)}";
 
         try {
             cst = con.prepareCall(sql);

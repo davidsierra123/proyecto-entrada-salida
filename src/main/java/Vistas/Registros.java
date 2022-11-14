@@ -66,8 +66,10 @@ public class Registros extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTable1);
 
         btnmostrar_profe.setText("Mostrar");
+        btnmostrar_profe.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btneliminar_profe.setText("Eliminar");
+        btneliminar_profe.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout JPprofesoresLayout = new javax.swing.GroupLayout(JPprofesores);
         JPprofesores.setLayout(JPprofesoresLayout);
@@ -85,21 +87,19 @@ public class Registros extends javax.swing.JInternalFrame {
         JPprofesoresLayout.setVerticalGroup(
             JPprofesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPprofesoresLayout.createSequentialGroup()
-                .addGroup(JPprofesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPprofesoresLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(JPprofesoresLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(btnmostrar_profe)
-                        .addGap(69, 69, 69)
-                        .addComponent(btneliminar_profe)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JPprofesoresLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(btnmostrar_profe)
+                .addGap(69, 69, 69)
+                .addComponent(btneliminar_profe))
         );
 
         JPestudiantes.setBorder(javax.swing.BorderFactory.createTitledBorder("Registros de Estudiantes"));
 
         btnmostrar_estu.setText("Mostrar");
+        btnmostrar_estu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -115,6 +115,7 @@ public class Registros extends javax.swing.JInternalFrame {
         jScrollPane2.setViewportView(jTable2);
 
         btneliminar_estu.setText("Eliminar");
+        btneliminar_estu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout JPestudiantesLayout = new javax.swing.GroupLayout(JPestudiantes);
         JPestudiantes.setLayout(JPestudiantesLayout);
@@ -123,15 +124,11 @@ public class Registros extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPestudiantesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(JPestudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPestudiantesLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(btnmostrar_estu)
-                        .addContainerGap(12, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPestudiantesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btneliminar_estu)
-                        .addContainerGap())))
+                    .addComponent(btnmostrar_estu)
+                    .addComponent(btneliminar_estu))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         JPestudiantesLayout.setVerticalGroup(
             JPestudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,14 +140,15 @@ public class Registros extends javax.swing.JInternalFrame {
                     .addGroup(JPestudiantesLayout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(btnmostrar_estu)
-                        .addGap(78, 78, 78)
+                        .addGap(72, 72, 72)
                         .addComponent(btneliminar_estu)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         JPper_aseo.setBorder(javax.swing.BorderFactory.createTitledBorder("Registros del Personal de Aseo"));
 
         jButton3.setText("Mostrar");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -166,15 +164,16 @@ public class Registros extends javax.swing.JInternalFrame {
         jScrollPane3.setViewportView(jTable3);
 
         btneliminar_aseo.setText("Eliminar");
+        btneliminar_aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout JPper_aseoLayout = new javax.swing.GroupLayout(JPper_aseo);
         JPper_aseo.setLayout(JPper_aseoLayout);
         JPper_aseoLayout.setHorizontalGroup(
             JPper_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPper_aseoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPper_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3)
                     .addComponent(btneliminar_aseo))
@@ -183,15 +182,15 @@ public class Registros extends javax.swing.JInternalFrame {
         JPper_aseoLayout.setVerticalGroup(
             JPper_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPper_aseoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(JPper_aseoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(JPper_aseoLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jButton3)
-                        .addGap(66, 66, 66)
-                        .addComponent(btneliminar_aseo)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(jButton3)
+                .addGap(66, 66, 66)
+                .addComponent(btneliminar_aseo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPper_aseoLayout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -202,20 +201,19 @@ public class Registros extends javax.swing.JInternalFrame {
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JPper_aseo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JPprofesores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addComponent(JPestudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(JPprofesores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(JPestudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JPestudiantes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JPprofesores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(108, 108, 108)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JPestudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JPprofesores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
                 .addComponent(JPper_aseo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );

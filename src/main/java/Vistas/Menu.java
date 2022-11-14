@@ -60,28 +60,28 @@ public class Menu extends javax.swing.JFrame {
         );
 
         Menu_A.setText("Asistencias");
-        Menu_A.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Menu_A.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         Reg_asistencia.setText("Reg.Asistencia");
-        Reg_asistencia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Reg_asistencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menu_A.add(Reg_asistencia);
 
         menus.add(Menu_A);
 
         Menu_Alum.setText("Alumnos");
-        Menu_Alum.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Menu_Alum.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         Reg_Alumnos.setText("Reg.Alumnos");
-        Reg_Alumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Reg_Alumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menu_Alum.add(Reg_Alumnos);
 
         menus.add(Menu_Alum);
 
         Menu_Pro.setText("Profesores");
-        Menu_Pro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Menu_Pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         Reg_Profesores.setText("Reg.Profesores");
-        Reg_Profesores.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Reg_Profesores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Reg_Profesores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reg_ProfesoresActionPerformed(evt);
@@ -92,10 +92,10 @@ public class Menu extends javax.swing.JFrame {
         menus.add(Menu_Pro);
 
         Menu_aseo.setText("Per.Aseo");
-        Menu_aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Menu_aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         Reg_Personal_Aseo.setText("Reg.Per.Aseo");
-        Reg_Personal_Aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Reg_Personal_Aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Reg_Personal_Aseo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Reg_Personal_AseoActionPerformed(evt);
@@ -106,8 +106,10 @@ public class Menu extends javax.swing.JFrame {
         menus.add(Menu_aseo);
 
         Menuregistrosusuarios.setText("Usuarios Registrados");
+        Menuregistrosusuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         MItemregistros.setText("Registros");
+        MItemregistros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menuregistrosusuarios.add(MItemregistros);
 
         menus.add(Menuregistrosusuarios);

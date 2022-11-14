@@ -33,15 +33,19 @@ public class Validar extends javax.swing.JFrame {
         Panel_Verificar = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         Id_Title = new javax.swing.JLabel();
-        Nom_Title2 = new javax.swing.JLabel();
+        Apellido = new javax.swing.JLabel();
         Identificacion = new javax.swing.JTextField();
-        Nombres = new javax.swing.JTextField();
+        Rol_Text = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         B_Validar = new javax.swing.JButton();
         B_Salida = new javax.swing.JButton();
         Regresar = new javax.swing.JButton();
         date = new javax.swing.JLabel();
         hour = new javax.swing.JLabel();
+        Nom_Title5 = new javax.swing.JLabel();
+        Nombres1 = new javax.swing.JTextField();
+        Apellido1 = new javax.swing.JLabel();
+        Apellido_Text = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,61 +54,78 @@ public class Validar extends javax.swing.JFrame {
         Panel_Verificar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titulo.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        Titulo.setText("Registrar Entrada Y Salida");
-        Panel_Verificar.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+        Titulo.setText("Registro De Entrada Y Salida");
+        Panel_Verificar.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
 
         Id_Title.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         Id_Title.setText("Identificacion");
         Panel_Verificar.add(Id_Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
-        Nom_Title2.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        Nom_Title2.setText("Nombres");
-        Panel_Verificar.add(Nom_Title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+        Apellido.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        Apellido.setText("Rol");
+        Panel_Verificar.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
-        Identificacion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Identificacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Panel_Verificar.add(Identificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 210, 25));
 
-        Nombres.setEditable(false);
-        Nombres.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Panel_Verificar.add(Nombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 210, 25));
+        Rol_Text.setEditable(false);
+        Rol_Text.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel_Verificar.add(Rol_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 210, 25));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         jLabel1.setText("INSTITUCION EDUCATIVA LA AGUADA SEDE PRINCIPAL");
-        Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 410, -1));
+        Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 410, -1));
 
         B_Validar.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        B_Validar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\entrada.png")); // NOI18N
+        B_Validar.setIcon(new javax.swing.ImageIcon("C:\\Users\\David Sierra\\Desktop\\trabajos\\proyecto-final\\src\\main\\java\\IMG\\entrada.png")); // NOI18N
         B_Validar.setBorderPainted(false);
-        B_Validar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        B_Validar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         B_Validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 B_ValidarActionPerformed(evt);
             }
         });
-        Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 80, 40));
+        Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 80, 40));
 
         B_Salida.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        B_Salida.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\salida.png")); // NOI18N
-        B_Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        B_Salida.setIcon(new javax.swing.ImageIcon("C:\\Users\\David Sierra\\Desktop\\trabajos\\proyecto-final\\src\\main\\java\\IMG\\salida.png")); // NOI18N
+        B_Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         B_Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 B_SalidaActionPerformed(evt);
             }
         });
-        Panel_Verificar.add(B_Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 80, 40));
+        Panel_Verificar.add(B_Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 410, 80, 40));
 
         Regresar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         Regresar.setForeground(new java.awt.Color(255, 255, 255));
-        Regresar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\Regresar.png")); // NOI18N
-        Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 80, 30));
+        Regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\David Sierra\\Desktop\\trabajos\\proyecto-final\\src\\main\\java\\IMG\\Regresar.png")); // NOI18N
+        Regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 80, 30));
 
         date.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
         date.setText("YY/MM/DD");
-        Panel_Verificar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 98, -1));
+        Panel_Verificar.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 80, -1));
 
         hour.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 14)); // NOI18N
         hour.setText("00:00:00");
-        Panel_Verificar.add(hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 98, -1));
+        Panel_Verificar.add(hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 98, -1));
+
+        Nom_Title5.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        Nom_Title5.setText("Nombres");
+        Panel_Verificar.add(Nom_Title5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+
+        Nombres1.setEditable(false);
+        Nombres1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel_Verificar.add(Nombres1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 210, 25));
+
+        Apellido1.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        Apellido1.setText("Apellidos");
+        Panel_Verificar.add(Apellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+
+        Apellido_Text.setEditable(false);
+        Apellido_Text.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel_Verificar.add(Apellido_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 210, 25));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,7 +135,7 @@ public class Validar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel_Verificar, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+            .addComponent(Panel_Verificar, javax.swing.GroupLayout.DEFAULT_SIZE, 528, Short.MAX_VALUE)
         );
 
         pack();
@@ -164,14 +185,18 @@ public class Validar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel Apellido;
+    public javax.swing.JLabel Apellido1;
+    public javax.swing.JTextField Apellido_Text;
     public javax.swing.JButton B_Salida;
     public javax.swing.JButton B_Validar;
     public javax.swing.JLabel Id_Title;
     public javax.swing.JTextField Identificacion;
-    public javax.swing.JLabel Nom_Title2;
-    public javax.swing.JTextField Nombres;
+    public javax.swing.JLabel Nom_Title5;
+    public javax.swing.JTextField Nombres1;
     public javax.swing.JPanel Panel_Verificar;
     public javax.swing.JButton Regresar;
+    public javax.swing.JTextField Rol_Text;
     public javax.swing.JLabel Titulo;
     public javax.swing.JLabel date;
     public javax.swing.JLabel hour;
