@@ -4,16 +4,14 @@
  */
 package Controllador;
 
-import Modelos.Guardar_Asistencia;
+import Modelos.Estudiantes;
 import Modelos.Reloj;
 import Modelos.crudpersona;
-import Vistas.Alumnos;
 import Vistas.Login;
 import Vistas.Validar;
 import Vistas.Menu;
-import Vistas.Per_Aseo;
-import Vistas.Profesores;
 import Vistas.Registros;
+import Vistas.Tablas_Registros;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import javax.swing.JTable;
@@ -41,11 +39,13 @@ public class Controllador implements ActionListener {
 
     Login log;
     Menu menu = new Menu();
-    Per_Aseo aseo = new Per_Aseo();
-    Alumnos alu = new Alumnos();
-    Profesores profe = new Profesores();
     Registros reg = new Registros();
+    Tablas_Registros tabla_reg = new Tablas_Registros();
     public static Validar Validacion = new Validar();
+
+    /*
+    Clases de Modelos
+     */
     crudpersona crp = new crudpersona();
     Reloj rel = new Reloj();
 
@@ -60,10 +60,8 @@ public class Controllador implements ActionListener {
          */
 
         this.menu.Reg_asistencia.addActionListener(this);
-        this.menu.Reg_Alumnos.addActionListener(this);
-        this.menu.Reg_Profesores.addActionListener(this);
-        this.menu.Reg_Personal_Aseo.addActionListener(this);
         this.menu.MItemregistros.addActionListener(this);
+        this.menu.MenuItemtabla_reg.addActionListener(this);
 
         /*
         botones del formulario de validacion
@@ -74,17 +72,9 @@ public class Controllador implements ActionListener {
         this.rel.run();
 
         /*
-        BOTONES DEL FORMULARIOS ESTUDIANTES
+        BOTONES DEL FORMULARIOS REGISTROS
          */
-        this.alu.Guardar.addActionListener(this);
-        /*
-        BOTONES DEL FORMULARIOS PROFESORES
-         */
-        this.profe.btnguardar.addActionListener(this);
-        /*
-        BOTONES DEL FORMULARIOS PERSONAL DE ASEO
-         */
-        this.aseo.btnguardar.addActionListener(this);
+        this.reg.btnguardar.addActionListener(this);
     }
 
     public void Validar() {
@@ -105,9 +95,8 @@ public class Controllador implements ActionListener {
                 menu.setVisible(true);
                 log.setVisible(false);
 
-                menu.Menu_Alum.setVisible(false);
-                menu.Menu_Pro.setVisible(false);
-                menu.Menu_aseo.setVisible(false);
+                menu.Menuregistrosusuarios.setVisible(false);
+
             } else {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error De Autenticacion!</p></html>");
             }
@@ -126,112 +115,65 @@ public class Controllador implements ActionListener {
             Validacion.setVisible(false);
 
         }
-        if (e.getSource() == menu.Reg_Alumnos) {
-            menu.Panel.add(alu);
-            alu.show();
-            profe.doDefaultCloseAction();
-            aseo.doDefaultCloseAction();
-        }
-        if (e.getSource() == menu.Reg_Profesores) {
-            menu.Panel.add(profe);
-            profe.show();
-            alu.doDefaultCloseAction();
-            aseo.doDefaultCloseAction();
-        }
-        if (e.getSource() == menu.Reg_Personal_Aseo) {
-            menu.Panel.add(aseo);
-            aseo.show();
-            alu.doDefaultCloseAction();
-            profe.doDefaultCloseAction();
-        }
         if (e.getSource() == menu.MItemregistros) {
             menu.Panel.add(reg);
             reg.show();
-
-            alu.doDefaultCloseAction();
-            profe.doDefaultCloseAction();
-            aseo.doDefaultCloseAction();
-
+            tabla_reg.doDefaultCloseAction();
         }
-
         /*
         BOTONES DE REGISTRO DE LOS ALUMNOS
          */
-        if (e.getSource() == alu.Guardar) {
-            Id = Integer.parseInt(alu.Id_Alumnos.getText());
-            Nombres = alu.Nom_Alumnos.getText();
-            Apellidos = alu.Ape_Alumnos.getText();
-            Rol = alu.txtrol.getText();
+        if (e.getSource() == reg.btnguardar) {
+            Id = Integer.parseInt(reg.txtID.getText());
+            Nombres = reg.txtNombre.getText();
+            Apellidos = reg.txtApellidos.getText();
+            Rol = (String) reg.ComboBoxRol.getSelectedItem();
 
-            boolean save = crp.registro_Estudiantes(Id, Nombres, Apellidos, Rol);
+            Boolean profes = crp.registro_Profesores(Id, Nombres, Apellidos, Rol);
+            Boolean estu = crp.registro_Estudiantes(Id, Nombres, Apellidos, Rol);
+            Boolean per = crp.registro_Per_Aseo(Id, Nombres, Apellidos, Rol);
 
-            if (save == true) {
+            if (Rol.equals("Profesor/a") && profes == true) {
+
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n");
 
-                alu.Id_Alumnos.setText("");
-                alu.Nom_Alumnos.setText("");
-                alu.Ape_Alumnos.setText("");
-                alu.txtrol.setText("");
+                reg.txtID.setText("");
+                reg.txtNombre.setText("");
+                reg.txtApellidos.setText("");
+                reg.ComboBoxRol.setSelectedItem(1);
+            } else if (Rol.equals("Estudiante") && estu == true) {
 
-            } else {
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar!</p></html>" + "\n");
-
-            }
-
-        }
-        if (e.getSource() == profe.btnguardar) {
-            Id = Integer.parseInt(profe.Id_Profe.getText());
-            Nombres = profe.Nom_Profe.getText();
-            Apellidos = profe.Ape_Profe.getText();
-            Rol = profe.txtrol.getText();
-            boolean save = crp.registro_Profesores(Id, Nombres, Apellidos, Rol);
-
-            if (save == true) {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n");
 
-                profe.Id_Profe.setText("");
-                profe.Nom_Profe.setText("");
-                profe.Ape_Profe.setText("");
-                profe.txtrol.setText("");
+                reg.txtID.setText("");
+                reg.txtNombre.setText("");
+                reg.txtApellidos.setText("");
+                reg.ComboBoxRol.setSelectedItem(1);
+            } else if (Rol.equals("Personal de Aseo") && per == true) {
 
-            } else {
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar!</p></html>" + "\n");
-
-            }
-
-        }
-        if (e.getSource() == aseo.btnguardar) {
-            Id = Integer.parseInt(aseo.Id_Aseo.getText());
-            Nombres = aseo.Nom_Aseo.getText();
-            Apellidos = aseo.Ape_Aseo.getText();
-            Rol = aseo.txtrol.getText();
-            boolean save = crp.registro_Per_Aseo(Id, Nombres, Apellidos, Rol);
-
-            if (save == true) {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n");
 
-                aseo.Id_Aseo.setText("");
-                aseo.Nom_Aseo.setText("");
-                aseo.Ape_Aseo.setText("");
-                aseo.txtrol.setText("");
+                reg.txtID.setText("");
+                reg.txtNombre.setText("");
+                reg.txtApellidos.setText("");
+                reg.ComboBoxRol.setSelectedItem(1);
 
             } else {
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar!</p></html>" + "\n");
+                JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar Usuario Ya Existe!</p></html>" + "\n");
 
             }
-
         }
         /*BOTON DE VALIDACION DE ASISTENCIA Y SUS COMPONENTES*/
 
         if (e.getSource() == this.Validacion.B_Validar) {
 
-            Id = Integer.parseInt(Validacion.Identificacion.getText());
-            Nombres = "Gonzalo";
-            Apellidos = "Araujo";
+            Id = Integer.parseInt(Validacion.txtID.getText());
+            Nombres
+                    = Apellidos = "Araujo";
             Rol = "Estudiante";
-            this.Validacion.Rol_Text.setText(Validacion.Rol_Text.getText());
-            this.Validacion.Nombres1.setText(Validacion.Nombres1.getText());
-            this.Validacion.Apellido_Text.setText(Validacion.Nombres1.getText());
+            this.Validacion.txtRol.setText(Validacion.txtRol.getText());
+            this.Validacion.txtNombres.setText(Validacion.txtNombres.getText());
+            this.Validacion.txtApellidos.setText(Validacion.txtNombres.getText());
             Fecha = Validacion.date.getText();
             Hora = Validacion.hour.getText();
 
@@ -239,16 +181,16 @@ public class Controllador implements ActionListener {
 
             if (save = true) {
 
-                this.Validacion.Nombres1.setText(Nombres + " ");
-                this.Validacion.Rol_Text.setText(Rol + " ");
-                this.Validacion.Apellido_Text.setText(Apellidos + " ");
+                this.Validacion.txtNombres.setText(Nombres + " ");
+                this.Validacion.txtApellidos.setText(Apellidos + " ");
+                this.Validacion.txtRol.setText(Rol + " ");
 
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
 
-                this.Validacion.Identificacion.setText("");
-                this.Validacion.Rol_Text.setText("");
-                this.Validacion.Nombres1.setText("");
-                this.Validacion.Apellido_Text.setText("");
+                this.Validacion.txtID.setText("");
+                this.Validacion.txtNombres.setText("");
+                this.Validacion.txtApellidos.setText("");
+                this.Validacion.txtRol.setText("");
 
             } else {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Error Al Validar!</p></html>");
@@ -257,7 +199,7 @@ public class Controllador implements ActionListener {
         }
 
         if (e.getSource() == Validacion.B_Salida) {
-            Id = Integer.parseInt(Validacion.Identificacion.getText());
+            Id = Integer.parseInt(Validacion.txtID.getText());
             Hora = Validacion.hour.getText();
 
             JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Salida Exitoso!</p></html>" + "\n");

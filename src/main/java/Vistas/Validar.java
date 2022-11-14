@@ -34,8 +34,8 @@ public class Validar extends javax.swing.JFrame {
         Titulo = new javax.swing.JLabel();
         Id_Title = new javax.swing.JLabel();
         Apellido = new javax.swing.JLabel();
-        Identificacion = new javax.swing.JTextField();
-        Rol_Text = new javax.swing.JTextField();
+        txtID = new javax.swing.JTextField();
+        txtRol = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         B_Validar = new javax.swing.JButton();
         B_Salida = new javax.swing.JButton();
@@ -43,9 +43,9 @@ public class Validar extends javax.swing.JFrame {
         date = new javax.swing.JLabel();
         hour = new javax.swing.JLabel();
         Nom_Title5 = new javax.swing.JLabel();
-        Nombres1 = new javax.swing.JTextField();
+        txtNombres = new javax.swing.JTextField();
         Apellido1 = new javax.swing.JLabel();
-        Apellido_Text = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,19 +65,18 @@ public class Validar extends javax.swing.JFrame {
         Apellido.setText("Rol");
         Panel_Verificar.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
-        Identificacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Panel_Verificar.add(Identificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 210, 25));
+        txtID.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel_Verificar.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 210, 25));
 
-        Rol_Text.setEditable(false);
-        Rol_Text.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Panel_Verificar.add(Rol_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 210, 25));
+        txtRol.setEditable(false);
+        txtRol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel_Verificar.add(txtRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 210, 25));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         jLabel1.setText("INSTITUCION EDUCATIVA LA AGUADA SEDE PRINCIPAL");
         Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 410, -1));
 
         B_Validar.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        B_Validar.setIcon(new javax.swing.ImageIcon("C:\\Users\\David Sierra\\Desktop\\trabajos\\proyecto-final\\src\\main\\java\\IMG\\entrada.png")); // NOI18N
         B_Validar.setBorderPainted(false);
         B_Validar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         B_Validar.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +87,6 @@ public class Validar extends javax.swing.JFrame {
         Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 80, 40));
 
         B_Salida.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
-        B_Salida.setIcon(new javax.swing.ImageIcon("C:\\Users\\David Sierra\\Desktop\\trabajos\\proyecto-final\\src\\main\\java\\IMG\\salida.png")); // NOI18N
         B_Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         B_Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +97,6 @@ public class Validar extends javax.swing.JFrame {
 
         Regresar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         Regresar.setForeground(new java.awt.Color(255, 255, 255));
-        Regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\David Sierra\\Desktop\\trabajos\\proyecto-final\\src\\main\\java\\IMG\\Regresar.png")); // NOI18N
         Regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 80, 30));
 
@@ -115,17 +112,17 @@ public class Validar extends javax.swing.JFrame {
         Nom_Title5.setText("Nombres");
         Panel_Verificar.add(Nom_Title5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
-        Nombres1.setEditable(false);
-        Nombres1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Panel_Verificar.add(Nombres1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 210, 25));
+        txtNombres.setEditable(false);
+        txtNombres.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel_Verificar.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 210, 25));
 
         Apellido1.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
         Apellido1.setText("Apellidos");
         Panel_Verificar.add(Apellido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
 
-        Apellido_Text.setEditable(false);
-        Apellido_Text.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Panel_Verificar.add(Apellido_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 210, 25));
+        txtApellidos.setEditable(false);
+        txtApellidos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel_Verificar.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 210, 25));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,19 +184,19 @@ public class Validar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel Apellido;
     public javax.swing.JLabel Apellido1;
-    public javax.swing.JTextField Apellido_Text;
     public javax.swing.JButton B_Salida;
     public javax.swing.JButton B_Validar;
     public javax.swing.JLabel Id_Title;
-    public javax.swing.JTextField Identificacion;
     public javax.swing.JLabel Nom_Title5;
-    public javax.swing.JTextField Nombres1;
     public javax.swing.JPanel Panel_Verificar;
     public javax.swing.JButton Regresar;
-    public javax.swing.JTextField Rol_Text;
     public javax.swing.JLabel Titulo;
     public javax.swing.JLabel date;
     public javax.swing.JLabel hour;
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JTextField txtApellidos;
+    public javax.swing.JTextField txtID;
+    public javax.swing.JTextField txtNombres;
+    public javax.swing.JTextField txtRol;
     // End of variables declaration//GEN-END:variables
 }

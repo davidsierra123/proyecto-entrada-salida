@@ -32,14 +32,9 @@ public class Menu extends javax.swing.JFrame {
         menus = new javax.swing.JMenuBar();
         Menu_A = new javax.swing.JMenu();
         Reg_asistencia = new javax.swing.JMenuItem();
-        Menu_Alum = new javax.swing.JMenu();
-        Reg_Alumnos = new javax.swing.JMenuItem();
-        Menu_Pro = new javax.swing.JMenu();
-        Reg_Profesores = new javax.swing.JMenuItem();
-        Menu_aseo = new javax.swing.JMenu();
-        Reg_Personal_Aseo = new javax.swing.JMenuItem();
         Menuregistrosusuarios = new javax.swing.JMenu();
         MItemregistros = new javax.swing.JMenuItem();
+        MenuItemtabla_reg = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
@@ -68,49 +63,20 @@ public class Menu extends javax.swing.JFrame {
 
         menus.add(Menu_A);
 
-        Menu_Alum.setText("Alumnos");
-        Menu_Alum.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        Reg_Alumnos.setText("Reg.Alumnos");
-        Reg_Alumnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Menu_Alum.add(Reg_Alumnos);
-
-        menus.add(Menu_Alum);
-
-        Menu_Pro.setText("Profesores");
-        Menu_Pro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        Reg_Profesores.setText("Reg.Profesores");
-        Reg_Profesores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Reg_Profesores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Reg_ProfesoresActionPerformed(evt);
-            }
-        });
-        Menu_Pro.add(Reg_Profesores);
-
-        menus.add(Menu_Pro);
-
-        Menu_aseo.setText("Per.Aseo");
-        Menu_aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        Reg_Personal_Aseo.setText("Reg.Per.Aseo");
-        Reg_Personal_Aseo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Reg_Personal_Aseo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Reg_Personal_AseoActionPerformed(evt);
-            }
-        });
-        Menu_aseo.add(Reg_Personal_Aseo);
-
-        menus.add(Menu_aseo);
-
-        Menuregistrosusuarios.setText("Usuarios Registrados");
+        Menuregistrosusuarios.setText("Registros");
         Menuregistrosusuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         MItemregistros.setText("Registros");
         MItemregistros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menuregistrosusuarios.add(MItemregistros);
+
+        MenuItemtabla_reg.setText("Tabla_Registros");
+        MenuItemtabla_reg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemtabla_regActionPerformed(evt);
+            }
+        });
+        Menuregistrosusuarios.add(MenuItemtabla_reg);
 
         menus.add(Menuregistrosusuarios);
 
@@ -130,12 +96,9 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Reg_ProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reg_ProfesoresActionPerformed
+    private void MenuItemtabla_regActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemtabla_regActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Reg_ProfesoresActionPerformed
-
-    private void Reg_Personal_AseoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reg_Personal_AseoActionPerformed
-    }//GEN-LAST:event_Reg_Personal_AseoActionPerformed
+    }//GEN-LAST:event_MenuItemtabla_regActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,15 +137,10 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem MItemregistros;
+    public javax.swing.JMenuItem MenuItemtabla_reg;
     public javax.swing.JMenu Menu_A;
-    public javax.swing.JMenu Menu_Alum;
-    public javax.swing.JMenu Menu_Pro;
-    public javax.swing.JMenu Menu_aseo;
     public javax.swing.JMenu Menuregistrosusuarios;
     public javax.swing.JDesktopPane Panel;
-    public javax.swing.JMenuItem Reg_Alumnos;
-    public javax.swing.JMenuItem Reg_Personal_Aseo;
-    public javax.swing.JMenuItem Reg_Profesores;
     public javax.swing.JMenuItem Reg_asistencia;
     public javax.swing.JMenuBar menus;
     // End of variables declaration//GEN-END:variables
