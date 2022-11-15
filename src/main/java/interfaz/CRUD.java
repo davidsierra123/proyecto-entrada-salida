@@ -21,4 +21,6 @@ public interface CRUD {
     public boolean registro_Profesores(int Id, String Nombres, String Apellidos, String Rol);
 
     public boolean registro_Per_Aseo(int Id, String Nombres, String Apellidos, String Rol);
+
+    public boolean validar_Entrada(int Id, String Fecha, String Hora);
 }

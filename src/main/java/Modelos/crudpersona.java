@@ -164,10 +164,6 @@ public class crudpersona extends Conexion implements CRUD {
             response = rs.next();
             if (response) {
                 do {
-                    rs.getString(2);
-                    rs.getString(3);
-                    rs.getString(4);
-
                     Controllador.Controllador.Validacion.txtNombres.setText(rs.getString(2));
                     Controllador.Controllador.Validacion.txtApellidos.setText(rs.getString(3));
                     Controllador.Controllador.Validacion.txtRol.setText(rs.getString(4));
@@ -192,5 +188,35 @@ public class crudpersona extends Conexion implements CRUD {
     @Override
     public boolean registro_entrada_2(int Id, String Nombres, String Apellidos, String Rol, String Fecha, String Hora) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public boolean validar_Entrada(int Id, String Fecha, String Hora) {
+        Connection con = getConexion();
+        ResultSet rs = null;
+        CallableStatement cst = null;
+        String sql = "{call Validar_entrada(?,?,?)}";
+
+        try {
+            cst = con.prepareCall(sql);
+            cst.setInt(1, Id);
+            cst.setString(2, Fecha);
+            cst.setString(3, Hora);
+            cst.execute();
+
+            return true;
+
+        } catch (SQLException e) {
+
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.toString());
+                return false;
+            }
+        }
     }
 }

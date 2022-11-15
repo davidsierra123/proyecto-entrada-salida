@@ -179,12 +179,14 @@ public class Controllador implements ActionListener {
             Rol = Validacion.txtRol.getText();
             Fecha = Validacion.date.getText();
             Hora = Validacion.hour.getText();
+            
+            boolean save = crp.validar_Entrada(Id, Fecha, Hora);
 
             crp.mostrar_Estudiante(Id, Nombres, Apellidos, Rol);
 
 //            boolean save = crp.registro_entrada(Id, Nombres, Apellidos, Rol, Fecha, Hora);
 
-            /*if (save = true) {
+            if (save = true) {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
 
                 this.Validacion.txtID.setText("");
@@ -195,7 +197,7 @@ public class Controllador implements ActionListener {
             } else {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: Red \">¡Error Al Validar!</p></html>");
 
-            }*/
+            }
         }
 
         if (e.getSource() == Validacion.B_Salida) {

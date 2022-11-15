@@ -38,7 +38,8 @@ public class Reloj implements Runnable {
 
         while (ct == h1) {
             calcula();
-            Controllador.Controllador.Validacion.hour.setText(hora + " " + ampm);
+            Controllador.Controllador.Validacion.hour.setText(hora /*+ " " + ampm*/);
+            Controllador.Controllador.Validacion.LblAmPm.setText(" " + ampm);
             horac = hora;
             Controllador.Controllador.Validacion.date.setText(fecha);
             try {
