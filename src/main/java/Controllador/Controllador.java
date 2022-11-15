@@ -128,40 +128,45 @@ public class Controllador implements ActionListener {
             Id = Integer.parseInt(reg.txtID.getText());
             Nombres = reg.txtNombre.getText();
             Apellidos = reg.txtApellidos.getText();
-            Rol = (String) reg.ComboBoxRol.getSelectedItem();
+            Rol = reg.ComboBoxRol.getSelectedItem().toString();
 
-            Boolean profes = crp.registro_Profesores(Id, Nombres, Apellidos, Rol);
-            Boolean estu = crp.registro_Estudiantes(Id, Nombres, Apellidos, Rol);
-            Boolean per = crp.registro_Per_Aseo(Id, Nombres, Apellidos, Rol);
-
-            if (Rol.equals("Profesor/a") && profes == true) {
-
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n");
-
-                reg.txtID.setText("");
-                reg.txtNombre.setText("");
-                reg.txtApellidos.setText("");
-                reg.ComboBoxRol.setSelectedItem(1);
-            } else if (Rol.equals("Estudiante") && estu == true) {
-
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n");
-
-                reg.txtID.setText("");
-                reg.txtNombre.setText("");
-                reg.txtApellidos.setText("");
-                reg.ComboBoxRol.setSelectedItem(1);
-            } else if (Rol.equals("Personal de Aseo") && per == true) {
-
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n");
-
-                reg.txtID.setText("");
-                reg.txtNombre.setText("");
-                reg.txtApellidos.setText("");
-                reg.ComboBoxRol.setSelectedItem(1);
-
-            } else {
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar Usuario Ya Existe!</p></html>" + "\n");
-
+            switch (Rol) {
+                case "Profesor/a":
+                    boolean profe = crp.registro_Profesores(Id, Nombres, Apellidos, Rol);
+                    if (profe == true) {
+                        JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n" + Rol);
+                        reg.txtID.setText("");
+                        reg.txtNombre.setText("");
+                        reg.txtApellidos.setText("");
+                        reg.ComboBoxRol.setSelectedItem("Profesor/a");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar Usuario Ya Existe!</p></html>" + "\n");
+                    }
+                    break;
+                case "Estudiante":
+                    boolean estu = crp.registro_Estudiantes(Id, Nombres, Apellidos, Rol);
+                    if (estu == true) {
+                        JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n" + Rol);
+                        reg.txtID.setText("");
+                        reg.txtNombre.setText("");
+                        reg.txtApellidos.setText("");
+                        reg.ComboBoxRol.setSelectedItem("Profesor/a");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar Usuario Ya Existe!</p></html>" + "\n");
+                    }
+                    break;
+                case "Personal de Aseo":
+                    boolean per = crp.registro_Per_Aseo(Id, Nombres, Apellidos, Rol);
+                    if (per == true) {
+                        JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro Exitoso!</p></html>" + "\n" + Rol);
+                        reg.txtID.setText("");
+                        reg.txtNombre.setText("");
+                        reg.txtApellidos.setText("");
+                        reg.ComboBoxRol.setSelectedItem("Profesor/a");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "<html><p style = \"color: red \">¡Error al Registrar Usuario Ya Existe!</p></html>" + "\n");
+                    }
+                    break;
             }
         }
         /*BOTON DE VALIDACION DE ASISTENCIA Y SUS COMPONENTES*/
@@ -170,21 +175,16 @@ public class Controllador implements ActionListener {
 
             Id = Integer.parseInt(Validacion.txtID.getText());
             Nombres = Validacion.txtNombres.getText();
-            Apellidos = Validacion.txtNombres.getText();
+            Apellidos = Validacion.txtApellidos.getText();
             Rol = Validacion.txtRol.getText();
             Fecha = Validacion.date.getText();
             Hora = Validacion.hour.getText();
-            
+
             crp.mostrar_Estudiante(Id, Nombres, Apellidos, Rol);
 
-            boolean save = crp.registro_entrada(Id, Nombres, Apellidos, Rol, Fecha, Hora);
+//            boolean save = crp.registro_entrada(Id, Nombres, Apellidos, Rol, Fecha, Hora);
 
-            if (save = true) {
-
-                /*this.Validacion.txtNombres.setText(Nombres + " ");
-                this.Validacion.txtApellidos.setText(Apellidos + " ");
-                this.Validacion.txtRol.setText(Rol + " ");*/
-
+            /*if (save = true) {
                 JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Registro De Asitencia Exitoso!</p></html>" + "\n");
 
                 this.Validacion.txtID.setText("");
@@ -193,9 +193,9 @@ public class Controllador implements ActionListener {
                 this.Validacion.txtRol.setText("");
 
             } else {
-                JOptionPane.showMessageDialog(null, "<html><p style = \"color: green \">¡Error Al Validar!</p></html>");
+                JOptionPane.showMessageDialog(null, "<html><p style = \"color: Red \">¡Error Al Validar!</p></html>");
 
-            }
+            }*/
         }
 
         if (e.getSource() == Validacion.B_Salida) {
