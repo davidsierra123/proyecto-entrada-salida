@@ -77,6 +77,7 @@ public class Validar extends javax.swing.JFrame {
         Panel_Verificar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 410, -1));
 
         B_Validar.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        B_Validar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\entrada.png")); // NOI18N
         B_Validar.setBorderPainted(false);
         B_Validar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         B_Validar.addActionListener(new java.awt.event.ActionListener() {
@@ -87,6 +88,7 @@ public class Validar extends javax.swing.JFrame {
         Panel_Verificar.add(B_Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 80, 40));
 
         B_Salida.setFont(new java.awt.Font("Segoe UI Black", 2, 14)); // NOI18N
+        B_Salida.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\salida.png")); // NOI18N
         B_Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         B_Salida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +99,7 @@ public class Validar extends javax.swing.JFrame {
 
         Regresar.setFont(new java.awt.Font("Segoe UI Black", 2, 12)); // NOI18N
         Regresar.setForeground(new java.awt.Color(255, 255, 255));
+        Regresar.setIcon(new javax.swing.ImageIcon("C:\\Gonzalo Araujo\\proyecto-final\\src\\main\\java\\IMG\\Regresar.png")); // NOI18N
         Regresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Panel_Verificar.add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 80, 30));
 
