@@ -4,7 +4,6 @@
  */
 package Modelos;
 
-import Vistas.Validar;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,10 +37,10 @@ public class Reloj implements Runnable {
 
         while (ct == h1) {
             calcula();
-            Controllador.Controllador.Validacion.hour.setText(hora /*+ " " + ampm*/);
-            Controllador.Controllador.Validacion.LblAmPm.setText(" " + ampm);
+            Controllador.Controllador.Reporte.hour.setText(hora /*+ " " + ampm*/);
+            Controllador.Controllador.Reporte.LblAmPm.setText(" " + ampm);
             horac = hora;
-            Controllador.Controllador.Validacion.date.setText(fecha);
+            Controllador.Controllador.Reporte.date.setText(fecha);
             try {
                 Thread.sleep(100);
             } catch (Exception e) {

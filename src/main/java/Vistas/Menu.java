@@ -4,11 +4,14 @@
  */
 package Vistas;
 
+import java.awt.Graphics;
+import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
- * @author SENA
+ * @author Gonzalo01
  */
 public class Menu extends javax.swing.JFrame {
 
@@ -18,7 +21,10 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setLocation(20, 20);
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,45 +38,57 @@ public class Menu extends javax.swing.JFrame {
         menus = new javax.swing.JMenuBar();
         Menu_A = new javax.swing.JMenu();
         Reg_asistencia = new javax.swing.JMenuItem();
+        jMenuItemtabla_reportes = new javax.swing.JMenuItem();
         Menuregistrosusuarios = new javax.swing.JMenu();
         MItemregistros = new javax.swing.JMenuItem();
         MenuItemtabla_reg = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItemCerrarSesion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setIconImage(getIconImage());
-        setIconImages(getIconImages());
 
-        Panel.setBackground(new java.awt.Color(102, 255, 204));
-        Panel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Panel.setBackground(new java.awt.Color(255, 255, 255));
+        Panel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Panel.setPreferredSize(new java.awt.Dimension(1300, 650));
 
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1048, Short.MAX_VALUE)
+            .addGap(0, 1309, Short.MAX_VALUE)
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 552, Short.MAX_VALUE)
+            .addGap(0, 549, Short.MAX_VALUE)
         );
 
-        Menu_A.setText("Asistencias");
-        Menu_A.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        menus.setBackground(new java.awt.Color(0, 0, 102));
 
-        Reg_asistencia.setText("Reg.Asistencia");
+        Menu_A.setForeground(new java.awt.Color(255, 255, 255));
+        Menu_A.setText("Asistencias");
+        Menu_A.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        Reg_asistencia.setText("Reporte de Asistencia");
         Reg_asistencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menu_A.add(Reg_asistencia);
 
+        jMenuItemtabla_reportes.setText("Tabla de Reportes");
+        jMenuItemtabla_reportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Menu_A.add(jMenuItemtabla_reportes);
+
         menus.add(Menu_A);
 
+        Menuregistrosusuarios.setForeground(new java.awt.Color(255, 255, 255));
         Menuregistrosusuarios.setText("Registros");
-        Menuregistrosusuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Menuregistrosusuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         MItemregistros.setText("Registros");
+        MItemregistros.setContentAreaFilled(false);
         MItemregistros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menuregistrosusuarios.add(MItemregistros);
 
         MenuItemtabla_reg.setText("Tabla_Registros");
+        MenuItemtabla_reg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         MenuItemtabla_reg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuItemtabla_regActionPerformed(evt);
@@ -80,17 +98,27 @@ public class Menu extends javax.swing.JFrame {
 
         menus.add(Menuregistrosusuarios);
 
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setText("Log out");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jMenuItemCerrarSesion.setText("Cerrar Sesion");
+        jMenuItemCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenu1.add(jMenuItemCerrarSesion);
+
+        menus.add(jMenu1);
+
         setJMenuBar(menus);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel)
+            .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 1309, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel)
+            .addComponent(Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
         );
 
         pack();
@@ -142,7 +170,11 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JMenu Menuregistrosusuarios;
     public javax.swing.JDesktopPane Panel;
     public javax.swing.JMenuItem Reg_asistencia;
+    private javax.swing.JMenu jMenu1;
+    public javax.swing.JMenuItem jMenuItemCerrarSesion;
+    public javax.swing.JMenuItem jMenuItemtabla_reportes;
     public javax.swing.JMenuBar menus;
     // End of variables declaration//GEN-END:variables
+
 
 }

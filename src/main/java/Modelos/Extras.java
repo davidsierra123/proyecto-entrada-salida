@@ -8,9 +8,9 @@ package Modelos;
  *
  * @author Gonzalo01
  */
-public class Personal_aseo extends Personas{
+public class Extras extends Personas{
 
-    public Personal_aseo(int Id, String Nombres, String Apellidos, String Rol) {
+    public Extras(int Id, String Nombres, String Apellidos, String Rol) {
         super(Id, Nombres, Apellidos, Rol);
     }
 }
